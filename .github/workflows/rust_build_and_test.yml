@@ -42,7 +42,7 @@ jobs:
       - name: install
         run: |
           brew tap "miguelandres/homebrew-tap"
-          brew cask dotfiles-rs
+          brew install dotfiles-rs
       - name: Personal config
         run: |
           dotfiles --log-level-filter debug apply-config personal_config.yaml
