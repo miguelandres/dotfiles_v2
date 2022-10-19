@@ -1,0 +1,10 @@
+defaults:
+  exec:
+    echo: true
+  link:
+    convert_to_absolute: true
+
+steps:
+  - link:
+      - ~/.gitconfig: git/gitconfig-personal
+      - ~/.commit-template.txt: git/commit-template.txt
