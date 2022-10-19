@@ -40,7 +40,7 @@ jobs:
           profile: minimal
       - uses: Swatinem/rust-cache@v2
         with:
-          shared-key: test-config--branch--${{ github.ref }}
+          shared-key: ${{ matrix.target.name }}-test-config--branch--${{ github.ref }}
       - name: Build
         run: cargo build --target ${{ matrix.target.name }}
       - name: Personal config
