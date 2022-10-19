@@ -1,4 +1,4 @@
-name: Rust Unit Tests
+name: Apply personal configuration
 
 on:
   push:
@@ -10,7 +10,7 @@ env:
   CARGO_TERM_COLOR: always
 
 jobs:
-  build-and-test:
+  apply-configs:
     name: ${{ matrix.make.name }} (${{ matrix.target.name }})
     runs-on: ${{ matrix.target.gh_env }}
     strategy:
@@ -29,16 +29,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      # When rustup is updated, it tries to replace its binary, which on Windows is somehow locked.
-      # This can result in the CI failure, see: https://github.com/rust-lang/rustup/issues/3029
-      - name: Setup rust
-        uses: actions-rs/toolchain@v1
-        with:
-          toolchain: ${{ matrix.rust}}
-          target: ${{ matrix.target.name }}
-          override: true
-          profile: minimal
-
       - name: install
         run: |
           brew tap "miguelandres/homebrew-tap"
