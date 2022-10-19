@@ -18,8 +18,8 @@ jobs:
       matrix:
         rust: [nightly]
         target:
-          - name: x86_64-unknown-linux-gnu
-            gh_env: ubuntu-latest
+          # - name: x86_64-unknown-linux-gnu
+          #   gh_env: ubuntu-latest
           - name: x86_64-apple-darwin
             gh_env: macos-11
 
@@ -38,12 +38,14 @@ jobs:
           target: ${{ matrix.target.name }}
           override: true
           profile: minimal
-      - uses: Swatinem/rust-cache@v2
-        with:
-          shared-key: ${{ matrix.target.name }}-test-config--branch--${{ github.ref }}
-      - name: Build
-        run: cargo build --target ${{ matrix.target.name }}
+
+      - name: install
+        run: |
+          brew tap "miguelandres/homebrew-tap"
+          brew cask dotfiles-rs
       - name: Personal config
         run: |
-          cargo run -- --log-level-filter debug apply-config personal_config.yaml
+          dotfiles --log-level-filter debug apply-config personal_config.yaml
           cat ~/.commit-template.txt | grep "### Test Plan:"
+          ls -la ~/.commit-template.txt
+          ls -la ~/.gitconfig
