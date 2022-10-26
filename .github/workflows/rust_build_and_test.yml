@@ -35,6 +35,7 @@ jobs:
           brew install dotfiles-rs
       - name: Personal config
         run: |
+          dotfiles --log-level-filter debug apply-config git/personal.yaml
           dotfiles --log-level-filter debug apply-config mac/basics.yaml
           cat ~/.commit-template.txt | grep "### Test Plan:"
           ls -la ~/.commit-template.txt
