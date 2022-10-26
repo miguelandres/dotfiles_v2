@@ -1,8 +1,6 @@
 defaults:
   exec:
     echo: true
-  link:
-    convert_to_absolute: true
   brew:
     force_casks: true
 
