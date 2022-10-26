@@ -31,14 +31,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: install
         run: |
-          brew tap "miguelandres/homebrew-tap"
-          brew install dotfiles-rs
+          ./download.sh
       - name: Personal config
         run: |
-          dotfiles --log-level-filter debug apply-config -n git/personal.yaml
-          dotfiles --log-level-filter debug apply-config git/personal.yaml
-          dotfiles --log-level-filter debug apply-config -n mac/basics.yaml
-          dotfiles --log-level-filter debug apply-config mac/basics.yaml
+          ./dotfiles --log-level-filter debug apply-config -n git/personal.yaml
+          ./dotfiles --log-level-filter debug apply-config git/personal.yaml
+          ./dotfiles --log-level-filter debug apply-config -n mac/basics.yaml
+          ./dotfiles --log-level-filter debug apply-config mac/basics.yaml
           cat ~/.commit-template.txt | grep "### Test Plan:"
           ls -la ~/.commit-template.txt
           ls -la ~/.gitconfig

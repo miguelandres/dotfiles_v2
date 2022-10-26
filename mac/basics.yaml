@@ -11,10 +11,13 @@ steps:
   - link:
       - ~/Library/LaunchAgents/sh.brew.update.plist: sh.brew.update.plist
       - ~/Library/LaunchAgents/sh.brew.upgrade.plist: sh.brew.upgrade.plist
+  - create:
+      - ~/Library/Workflows/Services
   - exec:
       - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
       - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.upgrade.plist
-      - install_workflows.sh
+      - cmd: ./install_workflows.sh
+        skip_in_ci: true
   - brew:
       tap:
         - homebrew/cask
