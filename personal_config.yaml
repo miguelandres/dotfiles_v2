@@ -3,8 +3,65 @@ defaults:
     echo: true
   link:
     convert_to_absolute: true
+  brew:
+    force_casks: true
 
 steps:
   - link:
       - ~/.gitconfig: git/gitconfig-personal
       - ~/.commit-template.txt: git/commit-template.txt
+      - ~/Library/LaunchAgents/sh.brew.update.plist: mac/sh.brew.update.plist
+      - ~/Library/LaunchAgents/sh.brew.upgrade.plist: mac/sh.brew.upgrade.plist
+  - shell:
+      - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
+      - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.upgrade.plist
+      - mac/install_workflows.sh
+  - brew:
+      tap:
+        - homebrew/cask
+        - miguelandres/homebrew-tap
+        - homebrew/cask-fonts
+        - spotify/public
+      formula:
+        - alda
+        - dezoomify-rs
+        - exiftool
+        - graphviz
+        - jupyterlab
+        - markdownlint-cli
+        - nailgun
+        - nodejs
+        - openssl
+        # Eww, this is because of php in alfred workflows
+        - php
+        - pre-commit
+        - pylint
+        - python
+        - python3
+        - rustup
+        - sbt
+        - scala
+        - scio
+        - vim
+        - yapf
+      cask:
+        - discord
+        - github
+        - jupyter-notebook-ql
+        - jupyter-notebook-viewer
+        - netnewswire
+        - signal
+        - spotify
+        - steam
+        - visual-studio-code
+        - vlc
+  - brew:
+      # This is a separate brew directive so it can be skipped in CI
+      skip_in_ci: true
+      mas:
+        Magnet: 441258766
+        Dashlane: 517914548
+        Hush: 1544743900
+        Theine: 955848755
+        Things: 904280696
+        Tooth Fairy: 1191449274
