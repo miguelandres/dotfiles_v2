@@ -16,7 +16,7 @@ steps:
   - exec:
       - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.update.plist
       - launchctl load /Users/$USER/Library/LaunchAgents/sh.brew.upgrade.plist
-      - mac/install_workflows.sh
+      - install_workflows.sh
   - brew:
       tap:
         - homebrew/cask
@@ -57,7 +57,9 @@ steps:
         - visual-studio-code
         - vlc
   - brew:
-      # This is a separate brew directive so it can be skipped in CI
+      # This is a separate brew directive so it can be skipped in CI.
+      # `mas` actions should never be run in CI since they depend on a
+      # Mac App Store login.
       skip_in_ci: true
       mas:
         Magnet: 441258766
