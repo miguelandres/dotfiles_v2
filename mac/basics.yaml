@@ -22,12 +22,19 @@ steps:
         - homebrew/cask-fonts
         - spotify/public
       formula:
+        # Ruby stuff first, it's messy.
+        - ruby
+        # Other stuff
         - alda
         - dezoomify-rs
+        - dockutil
         - exiftool
+        - fzf
         - graphviz
+        - hub
         - jupyterlab
         - markdownlint-cli
+        - mas
         - nailgun
         - nodejs
         - openssl
@@ -37,12 +44,16 @@ steps:
         - pylint
         - python3
         - ruby
+        - shellcheck
+        - shfmt
         - rustup
         - sbt
         - scala
         - scio
         - vim
         - yapf
+        - zsh
+        - zsh-autosuggestions
       cask:
         - discord
         - github
