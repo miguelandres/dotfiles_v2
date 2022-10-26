@@ -3,6 +3,9 @@ defaults:
     echo: true
   brew:
     force_casks: true
+  link:
+    force: true
+    relink: true
 
 steps:
   - link:
