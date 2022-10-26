@@ -9,8 +9,6 @@ defaults:
 
 steps:
   - link:
-      - ~/.gitconfig: git/gitconfig-personal
-      - ~/.commit-template.txt: git/commit-template.txt
       - ~/Library/LaunchAgents/sh.brew.update.plist: mac/sh.brew.update.plist
       - ~/Library/LaunchAgents/sh.brew.upgrade.plist: mac/sh.brew.upgrade.plist
   - exec:
@@ -37,8 +35,8 @@ steps:
         - php
         - pre-commit
         - pylint
-        - python
         - python3
+        - ruby
         - rustup
         - sbt
         - scala
