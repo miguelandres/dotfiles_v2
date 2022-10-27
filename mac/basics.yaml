@@ -40,7 +40,6 @@ steps:
         - jupyterlab
         - markdownlint-cli
         - mas
-        - nailgun
         - nodejs
         - openssl
         # Eww, this is because of php in alfred workflows
