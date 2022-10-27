@@ -25,6 +25,8 @@ steps:
         - homebrew/cask
         - homebrew/cask-drivers
         - homebrew/cask-fonts
+        # for different versions of temurin
+        - homebrew/cask-versions
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
