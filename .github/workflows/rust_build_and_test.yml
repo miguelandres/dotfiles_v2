@@ -18,9 +18,11 @@ jobs:
       matrix:
         rust: [nightly]
         target:
-          # - name: x86_64-unknown-linux-gnu
-          #   gh_env: ubuntu-latest
-          - name: x86_64-apple-darwin
+          - name: mac-personal-migue
+            gh_env: macos-11
+          - name: mac-personal-mati
+            gh_env: macos-11
+          - name: mac-work
             gh_env: macos-11
 
     env:
@@ -33,12 +35,6 @@ jobs:
         run: |
           brew tap miguelandres/homebrew-tap
           brew install dotfiles-rs
-      - name: Personal config
+      - name: Apply config {{matrix.target.name}}
         run: |
-          dotfiles --log-level-filter debug apply-config -n git/personal.yaml
-          dotfiles --log-level-filter debug apply-config git/personal.yaml
-          dotfiles --log-level-filter debug apply-config -n mac/basics.yaml
-          dotfiles --log-level-filter debug apply-config mac/basics.yaml
-          cat ~/.commit-template.txt | grep "### Test Plan:"
-          ls -la ~/.commit-template.txt
-          ls -la ~/.gitconfig
+          dotfiles --log-level-filter debug apply-config -n {{matrix.target.name}}.yaml
