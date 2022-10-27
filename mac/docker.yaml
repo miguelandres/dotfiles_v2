@@ -1,0 +1,5 @@
+steps:
+  - brew:
+      formula:
+        - docker
+        - docker-compose

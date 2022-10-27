@@ -11,6 +11,12 @@ defaults:
 
 steps:
   - subconfig:
+      - zsh/base.yaml
+      - zsh/mac.yaml
+      - zsh/mac-cloud.yaml
+      - zsh/mac-work.yaml
       - git/work.yaml
-      - mac/basics.yaml
+      - tmux/tmux.yaml
       - vim/vim.yaml
+      - mac/base.yaml
+      - mac/cloud.yaml

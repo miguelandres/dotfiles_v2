@@ -1,14 +1,14 @@
 [user]
         name = Miguel Yáñez-Barreto
         email = myanezbarreto@twitter.com
-	name = Miguel Andrés Yáñez-Barreto
-	email = myanezbarreto@twitter.com
+  name = Miguel Andrés Yáñez-Barreto
+  email = myanezbarreto@twitter.com
 [diff]
-	renames = true
+  renames = true
 [http]
-	postBuffer = 524288000
+  postBuffer = 524288000
 [color]
-	ui = true
+  ui = true
 
 # Force ssh to github
 [url "git@github.com:"]
@@ -22,6 +22,6 @@ pushInsteadOf = https://github.com/
   process = git-lfs filter-process
   required = true
 [commit]
-	template = /Users/myanezbarreto/.work-commit-template.txt
+  template = /Users/myanezbarreto/.work-commit-template.txt
 [core]
-	excludesfile = /Users/myanezbarreto/.gitignore_global
+  excludesfile = /Users/myanezbarreto/.gitignore_global

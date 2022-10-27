@@ -11,7 +11,13 @@ defaults:
 
 steps:
   - subconfig:
+      - zsh/base.yaml
+      - zsh/mac.yaml
+      - zsh/docker.yaml
       - git/personal.yaml
-      - mac/basics.yaml
-      - mac/personal.yaml
+      - tmux/tmux.yaml
       - vim/vim.yaml
+      - mac/base.yaml
+      - mac/personal.yaml
+      - mac/docker.yaml
+      - zsh/docker.yaml

@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
-	name = Miguel Barreto
-	email = miguelandres@users.noreply.github.com
+  name = Miguel Barreto
+  email = miguelandres@users.noreply.github.com
 
 # Force ssh to github
 [url "git@github.com:"]
@@ -15,6 +15,6 @@ pushInsteadOf = https://github.com/
   process = git-lfs filter-process
   required = true
 [core]
-	excludesfile = $HOME/.gitignore_global
+  excludesfile = $HOME/.gitignore_global
 [commit]
-	template = /Users/miguely/.commit-template.txt
+  template = /Users/miguely/.commit-template.txt
