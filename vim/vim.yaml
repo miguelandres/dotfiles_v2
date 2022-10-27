@@ -3,6 +3,8 @@ defaults:
     force: true
   link:
     create_parent_dirs: true
+    force: true
+    relink: true
 
 steps:
   - brew:
