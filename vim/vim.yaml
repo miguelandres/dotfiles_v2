@@ -1,11 +1,21 @@
 defaults:
+  create:
+    force: true
   link:
     create_parent_dirs: true
+
 steps:
+  - brew:
+      formula:
+        - vim
+  - create:
+      - ~/.vim/bundle
+      - ~/.vim/bundle/bbye
+      - ~/.vim/bundle/Vundle.vim
   - link:
       - ~/.vimrc: vimrc
-      - ~/.vim/bundle/bbye: bundle/bbye
-      - ~/.vim/bundle/Vundle.vim: bundle/Vundle.vim
       - ~/.vim/after/ftplugin: after/ftplugin
   - exec:
+      - git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+      - git clone https://github.com/moll/vim-bbye.git ~/.vim/bundle/bbye
       - 'vim -s install.vimscript || vim -s install.vimscript || echo "I give up, scripting vim installs is a pain in the ass."'
