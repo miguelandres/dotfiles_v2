@@ -23,8 +23,9 @@ steps:
   - brew:
       tap:
         - homebrew/cask
-        - miguelandres/homebrew-tap
+        - homebrew/cask-drivers
         - homebrew/cask-fonts
+        - miguelandres/homebrew-tap
         - spotify/public
       formula:
         # Ruby stuff first, it's messy.
