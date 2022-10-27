@@ -30,61 +30,75 @@ steps:
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
-        # Ruby stuff first, it's messy.
-        - ruby
-        # Other stuff
-        - alda
-        - dezoomify-rs
-        - dockutil
-        - exiftool
-        - fzf
-        - graphviz
-        - hub
-        - jupyterlab
-        - markdownlint-cli
-        - mas
+        # Programming languages & Tools
         - nodejs
-        - openssl
         # Eww, this is because of php in alfred workflows
         - php
-        - pre-commit
-        - pylint
         - python3
         - ruby
-        - shellcheck
-        - shfmt
         - rustup
         - sbt
         - scala
+        # Data processing
+        - jupyterlab
         - scio
-        - vim
+        # Version control
+        - git
+        - gh
+        - hub
+        - pre-commit
+        # Dependency management
+        - mas
+        # Linters
+        - markdownlint-cli
+        - pylint
         - yapf
+        # Shell tools
+        - fzf
+        - shellcheck
+        - shfmt
         - zsh
         - zsh-autosuggestions
+        # macOS gui helpers
+        - dockutil
+        # Other stuff
+        - alda
+        - dezoomify-rs
+        - exiftool
+        - graphviz
+        - openssl
+        - vim
       cask:
+        # Programming stuff
         - android-commandlinetools
         - android-studio
-        - alfred
-        - discord
-        - disk-inventory-x
-        - google-chrome
-        - github
-        - font-meslo-lg-nerd-font
-        - iterm2
         - jupyter-notebook-ql
         - jupyter-notebook-viewer
-        - logitech-options
-        - mysides
-        - netnewswire
-        - signal
-        - spotify
-        - steam
+        - github
         - temurin11
         - temurin17
         - visual-studio-code
+        # Basics
+        - alfred
+        - google-chrome
+        - font-meslo-lg-nerd-font
+        - iterm2
+        # Communication
+        - discord
+        - signal
+        # Media
+        - netnewswire
+        - spotify
+        - steam
         - vlc
+        # Helpful tools
+        - disk-inventory-x
+        - logitech-options
+        - mysides
   - brew:
       # This is a separate brew directive so it can be skipped in CI.
+      # Some of these formulae and casks either take too long to install or just
+      # don't install in CI.
       # `mas` actions should never be run in CI since they depend on a
       # Mac App Store login.
       skip_in_ci: true
@@ -119,6 +133,3 @@ steps:
         Kindle: 405399194
         # Office
         OneDrive: 823766827
-        Excel: 462058435
-        PowerPoint: 462062816
-        Word: 462054704

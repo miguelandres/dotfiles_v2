@@ -1,3 +1,6 @@
+defaults:
+  link:
+    create_parent_dirs: true
 steps:
   - link:
       - ~/.vimrc: vimrc

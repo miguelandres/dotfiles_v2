@@ -3,7 +3,6 @@ steps:
       tap:
         - homebrew/cask-fonts
       formula:
-        - gh
         # stuff for youtube-dl
         - youtube-dl
         - aria2

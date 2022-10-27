@@ -28,7 +28,7 @@ cat ~/.ssh/id_rsa.pub
 mkdir ~/src
 cd ~/src
 git clone --recurse-submodules -j8 git@github.com:miguelandres/dotfiles_v2.git
-cd ~/.dotfiles/
+cd ~/src/dotfiles/
 
 # Hackily download dotfiles from github directly.
 ./download.sh
