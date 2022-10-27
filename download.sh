@@ -9,7 +9,7 @@ URL=$(curl -s https://api.github.com/repos/miguelandres/dotfiles-rs/releases/lat
 | cut -c 2-)
 
 echo "downloading $URL"
-curl $URL -L -o df.tar.gz
+curl "$URL" -L -o df.tar.gz
 
 tar -xzvf df.tar.gz dotfiles
 rm df.tar.gz
