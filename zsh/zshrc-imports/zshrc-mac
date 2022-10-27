@@ -12,11 +12,11 @@ export HOMEBREW_FORCE_VENDOR_RUBY
 
 if [ -d "/opt/homebrew/opt" ]
 then
-	# shellcheck disable=SC2046
-	eval $(/opt/homebrew/bin/brew shellenv)
+  # shellcheck disable=SC2046
+  eval $(/opt/homebrew/bin/brew shellenv)
 else
-	# shellcheck disable=SC2046
-	eval $(/usr/local/bin/brew shellenv)
+  # shellcheck disable=SC2046
+  eval $(/usr/local/bin/brew shellenv)
 fi
 
 
