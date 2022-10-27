@@ -14,7 +14,7 @@ steps:
       - zsh/base.yaml
       - zsh/mac.yaml
       - git/mati.yaml
-      - vim/vim.yaml
       - tmux/tmux.yaml
+      - vim/vim.yaml
       - mac/base.yaml
       - mac/personal.yaml

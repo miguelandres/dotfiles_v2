@@ -15,8 +15,8 @@ steps:
       - zsh/mac.yaml
       - zsh/docker.yaml
       - git/personal.yaml
-      - vim/vim.yaml
       - tmux/tmux.yaml
+      - vim/vim.yaml
       - mac/base.yaml
       - mac/personal.yaml
       - mac/docker.yaml

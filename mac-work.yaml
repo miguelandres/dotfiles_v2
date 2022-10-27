@@ -16,7 +16,7 @@ steps:
       - zsh/mac-cloud.yaml
       - zsh/mac-work.yaml
       - git/work.yaml
-      - vim/vim.yaml
       - tmux/tmux.yaml
+      - vim/vim.yaml
       - mac/base.yaml
       - mac/cloud.yaml
