@@ -14,3 +14,5 @@ pushInsteadOf = https://github.com/
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[core]
+	excludesfile = /Users/myanezbarreto/.gitignore_global

@@ -5,6 +5,5 @@ defaults:
 
 steps:
   - link:
-      - ~/.gitconfig: gitconfig-personal
+      - ~/.gitconfig: gitconfig-mati
       - ~/.gitignore_global: gitignore_global
-      - ~/.commit-template.txt: commit-template.txt

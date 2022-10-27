@@ -60,14 +60,25 @@ steps:
         - zsh
         - zsh-autosuggestions
       cask:
+        - android-commandlinetools
+        - android-studio
+        - alfred
         - discord
+        - disk-inventory-x
+        - google-chrome
         - github
+        - font-meslo-lg-nerd-font
+        - iterm2
         - jupyter-notebook-ql
         - jupyter-notebook-viewer
+        - logitech-options
+        - mysides
         - netnewswire
         - signal
         - spotify
         - steam
+        - temurin11
+        - temurin17
         - visual-studio-code
         - vlc
   - brew:
@@ -75,10 +86,37 @@ steps:
       # `mas` actions should never be run in CI since they depend on a
       # Mac App Store login.
       skip_in_ci: true
+      formula:
+        - buildifier
+        - go
+        - gopls
+      cask:
+        - basictex
       mas:
-        Magnet: 441258766
-        Dashlane: 517914548
-        Hush: 1544743900
-        Theine: 955848755
+        # Chat & Communication
+        KakaoTalk: 869223134
+        LINE: 539883307
+        Messenger: 1480068668
+        Telegram: 747648890
+        WhatsApp: 1147396723
+        Wechat: 836500024
+        # Notetaking & Organization
+        GoodNotes: 1444383602
+        OneNote: 784801555
         Things: 904280696
+        # Utilities
+        Dashlane: 517914548
+        Magnet: 441258766
+        Theine: 955848755
         Tooth Fairy: 1191449274
+        BetterSnapTool: 417375580
+        # Safari Extensions
+        Hush: 1544743900
+        # Creative
+        Darkroom: 953286746
+        Kindle: 405399194
+        # Office
+        OneDrive: 823766827
+        Excel: 462058435
+        PowerPoint: 462062816
+        Word: 462054704
