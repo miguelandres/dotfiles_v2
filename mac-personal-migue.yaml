@@ -13,6 +13,8 @@ steps:
   - subconfig:
       - zsh/zsh.yaml
       - zsh/zsh-mac.yaml
+      - zsh/docker.yaml
+      - zsh/zsh-mac-cloud.yaml
       - git/personal.yaml
       - vim/vim.yaml
       - tmux/tmux.yaml
