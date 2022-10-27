@@ -1,7 +1,0 @@
-defaults:
-  link:
-    create_parent_dirs: true
-
-steps:
-  - link:
-      - ~/.zshrc-imports/plugins/.mac-cloud: zshrc-imports/plugins/mac-cloud

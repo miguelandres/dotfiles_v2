@@ -1,8 +1,0 @@
-defaults:
-  link:
-    create_parent_dirs: true
-
-steps:
-  - link:
-      - ~/.zshrc-imports/.zshrc-linux: zshrc-imports/zshrc-linux
-      - ~/.zshrc-imports/.aliases-linux: zshrc-imports/aliases-linux
