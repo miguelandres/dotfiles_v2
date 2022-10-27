@@ -20,4 +20,3 @@ steps:
       - tmux/tmux.yaml
       - mac/base.yaml
       - mac/cloud.yaml
-      - vim/vim.yaml

@@ -21,4 +21,3 @@ steps:
       - mac/personal.yaml
       - mac/docker.yaml
       - zsh/docker.yaml
-      - vim/vim.yaml
