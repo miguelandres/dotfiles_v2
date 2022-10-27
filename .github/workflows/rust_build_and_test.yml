@@ -37,4 +37,4 @@ jobs:
           brew install dotfiles-rs
       - name: Apply config ${{ matrix.target.name }}
         run: |
-          dotfiles --log-level-filter debug apply-config -n ${{ matrix.target.name }}.yaml
+          dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
