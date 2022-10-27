@@ -1,0 +1,17 @@
+defaults:
+  create:
+    force: true
+  exec:
+    echo: true
+  brew:
+    force_casks: true
+  link:
+    force: true
+    relink: true
+
+steps:
+  - subconfig:
+      - git/personal.yaml
+      - mac/basics.yaml
+      - mac/personal.yaml
+      - vim/vim.yaml

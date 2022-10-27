@@ -1,0 +1,11 @@
+defaults:
+  link:
+    create_parent_dirs: true
+steps:
+  - link:
+      - ~/.vimrc: vimrc
+      - ~/.vim/bundle/bbye: bundle/bbye
+      - ~/.vim/bundle/Vundle.vim: bundle/Vundle.vim
+      - ~/.vim/after/ftplugin: after/ftplugin
+  - exec:
+      - 'vim -s install.vimscript || vim -s install.vimscript || echo "I give up, scripting vim installs is a pain in the ass."'
