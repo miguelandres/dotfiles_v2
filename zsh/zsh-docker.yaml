@@ -1,0 +1,7 @@
+defaults:
+  link:
+    create_parent_dirs: true
+
+steps:
+  - link:
+      - ~/.zshrc-imports/plugins/.docker: zshrc-imports/plugins/docker

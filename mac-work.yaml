@@ -14,9 +14,10 @@ steps:
       - zsh/zsh.yaml
       - zsh/zsh-mac.yaml
       - zsh/zsh-mac-work.yaml
-      - zsh/zsh-mac-cloud.yaml
       - git/work.yaml
       - vim/vim.yaml
       - tmux/tmux.yaml
       - mac/basics.yaml
+      - mac/cloud.yaml
+      - zsh/zsh-mac-cloud.yaml
       - vim/vim.yaml

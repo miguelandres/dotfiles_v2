@@ -20,4 +20,6 @@ steps:
       - tmux/tmux.yaml
       - mac/basics.yaml
       - mac/personal.yaml
+      - mac/docker.yaml
+      - zsh/docker.yaml
       - vim/vim.yaml
