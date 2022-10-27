@@ -1,4 +1,6 @@
 defaults:
+  create:
+    force: true
   link:
     create_parent_dirs: true
 
