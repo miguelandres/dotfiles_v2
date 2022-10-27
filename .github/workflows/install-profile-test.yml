@@ -18,12 +18,21 @@ jobs:
       matrix:
         rust: [nightly]
         target:
+          - name: linux
+            gh_env: ubuntu-latest
           - name: mac-personal-migue
-            gh_env: macos-11
+            gh_env: macos-latest
           - name: mac-personal-mati
-            gh_env: macos-11
+            gh_env: macos-latest
           - name: mac-work
-            gh_env: macos-11
+            gh_env: macos-latest
+        include:
+          - target:
+              gh_env: ubuntu-latest
+            binary_version: x86_64-unknown-linux-gnu
+          - target:
+              gh_env: macos-latest
+            binary_version: macos-universal
 
     env:
       RUST_BACKTRACE: full
@@ -33,8 +42,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: install
         run: |
-          brew tap miguelandres/homebrew-tap
-          brew install dotfiles-rs
+          ./download.sh {{ matrix.binary_version }}
       - name: Apply config ${{ matrix.target.name }}
         run: |
           dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml

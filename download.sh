@@ -1,7 +1,9 @@
 #!/bin/bash
 
+os=${1=macos-universal}
+
 URL=$(curl -s https://api.github.com/repos/miguelandres/dotfiles-rs/releases/latest \
-| grep "browser_download_url.*macos-universal" \
+| grep "browser_download_url.*$os" \
 | cut -d : -f 2,3 \
 | tr -d \" \
 | cut -c 2-)
