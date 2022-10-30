@@ -40,9 +40,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: install
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Install dotfiles
         run: |
-          ./download.sh {{ matrix.binary_version }}
+          brew tap miguelandres/homebrew-tap
+          brew install dotfiles
       - name: Apply config ${{ matrix.target.name }}
         run: |
           dotfiles --log-level-filter debug apply-config ${{ matrix.target.name }}.yaml
