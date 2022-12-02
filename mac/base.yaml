@@ -30,6 +30,9 @@ steps:
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
+        # This is bazelisk on mac, bazel on linux
+        - bazelisk
+        - dockutil
         # Eww, this is because of php in alfred workflows
         - php
         # Dependency management

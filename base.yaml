@@ -24,8 +24,6 @@ steps:
         - markdownlint-cli
         - pylint
         - yapf
-        # macOS gui helpers
-        - dockutil
         # Other stuff
         - openssl
         - vim

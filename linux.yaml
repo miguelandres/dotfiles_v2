@@ -12,6 +12,7 @@ defaults:
 steps:
   - subconfig:
       - base.yaml
+      - linux/base.yaml
       - zsh/base.yaml
       - zsh/linux.yaml
       - git/personal.yaml
