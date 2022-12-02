@@ -5,7 +5,7 @@ steps:
         - spotify/public
       formula:
         # Programming languages & Tools
-        - bazel
+        # - bazel has been moved to bazelisk on mac and bazel on linux
         - nodejs
         - python3
         - ruby
