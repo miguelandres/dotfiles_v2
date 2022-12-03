@@ -18,12 +18,21 @@ jobs:
       matrix:
         rust: [nightly]
         target:
+          - name: linux
+            gh_env: ubuntu-latest
           - name: mac-personal-migue
-            gh_env: macos-11
+            gh_env: macos-12
           - name: mac-personal-mati
-            gh_env: macos-11
+            gh_env: macos-12
           - name: mac-work
-            gh_env: macos-11
+            gh_env: macos-12
+        include:
+          - target:
+              gh_env: ubuntu-latest
+            binary_version: x86_64-unknown-linux-gnu
+          - target:
+              gh_env: macos-12
+            binary_version: macos-universal
 
     env:
       RUST_BACKTRACE: full
@@ -31,7 +40,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: install
+      - name: Set up Homebrew
+        id: set-up-homebrew
+        uses: Homebrew/actions/setup-homebrew@master
+      - name: Install dotfiles
         run: |
           brew tap miguelandres/homebrew-tap
           brew install dotfiles-rs

@@ -11,6 +11,7 @@ defaults:
 
 steps:
   - subconfig:
+      - base.yaml
       - zsh/base.yaml
       - zsh/mac.yaml
       - git/mati.yaml

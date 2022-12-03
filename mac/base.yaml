@@ -30,38 +30,13 @@ steps:
         - miguelandres/homebrew-tap
         - spotify/public
       formula:
-        # Programming languages & Tools
-        - nodejs
+        # This is bazelisk on mac, bazel on linux
+        - bazelisk
+        - dockutil
         # Eww, this is because of php in alfred workflows
         - php
-        - python3
-        - ruby
-        - rustup
-        - sbt
-        - scala
-        # Data processing
-        - jupyterlab
-        - scio
-        # Version control
-        - git
-        - gh
-        - hub
-        - pre-commit
         # Dependency management
         - mas
-        # Linters
-        - markdownlint-cli
-        - pylint
-        - yapf
-        # Shell tools
-        - fzf
-        - shellcheck
-        - shfmt
-        - zsh
-        - zsh-autosuggestions
-        - zsh-completions
-        - zsh-syntax-highlighting
-        - zsh-vi-mode
         # macOS gui helpers
         - dockutil
         # Other stuff
@@ -105,10 +80,6 @@ steps:
       # `mas` actions should never be run in CI since they depend on a
       # Mac App Store login.
       skip_in_ci: true
-      formula:
-        - buildifier
-        - go
-        - gopls
       cask:
         - basictex
       mas:
