@@ -6,6 +6,7 @@ steps:
       formula:
         # Programming languages & Tools
         # - bazel has been moved to bazelisk on mac and bazel on linux
+        - kotlin
         - nodejs
         - python3
         - ruby
