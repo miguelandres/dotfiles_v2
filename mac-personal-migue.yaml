@@ -22,4 +22,4 @@ steps:
       - mac/personal.yaml
       - mac/docker.yaml
   - exec:
-      - ./defaults/migue.sh
+      - ./mac/defaults/migue.sh

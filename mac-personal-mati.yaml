@@ -20,4 +20,4 @@ steps:
       - mac/base.yaml
       - mac/personal.yaml
   - exec:
-      - ./defaults/migue.sh
+      - ./mac/defaults/migue.sh
