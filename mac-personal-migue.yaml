@@ -21,3 +21,5 @@ steps:
       - mac/base.yaml
       - mac/personal.yaml
       - mac/docker.yaml
+  - exec:
+      - ./defaults/migue.sh

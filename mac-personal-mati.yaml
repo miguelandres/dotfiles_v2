@@ -19,3 +19,5 @@ steps:
       - vim/vim.yaml
       - mac/base.yaml
       - mac/personal.yaml
+  - exec:
+      - ./defaults/migue.sh

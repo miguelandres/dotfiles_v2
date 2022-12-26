@@ -9,6 +9,7 @@ steps:
       formula:
         # Shell tools
         - fzf
+        - rbenv
         - shellcheck
         - shfmt
         - zsh
@@ -16,16 +17,18 @@ steps:
         - zsh-completions
         - zsh-syntax-highlighting
         - zsh-vi-mode
-  - link:
-      - ~/.zshrc: zshrc
-      - ~/.zshenv: zshenv
-      - ~/.zshrc-imports/.aliases: zshrc-imports/aliases
-      - ~/.p10k.zsh: p10k.zsh
-      - ~/.oh-my-zsh/custom/plugins/_bazel: custom/plugins/_bazel
-      - ~/.oh-my-zsh/custom/plugins/arcanist-tw: custom/plugins/arcanist-tw
+  - exec:
+      - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   - create:
       - ~/.oh-my-zsh/custom/plugins/alias-tips
       - ~/.oh-my-zsh/custom/themes/powerlevel10k
-  - exec:
       - git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
       - git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+  - link:
+      - ~/.oh-my-zsh/custom/plugins/_bazel: custom/plugins/_bazel
+      - ~/.oh-my-zsh/custom/plugins/arcanist-tw: custom/plugins/arcanist-tw
+      - ~/.zshrc: zshrc
+      - ~/.zshenv: zshenv
+      - ~/.zshrc-imports/.aliases: zshrc-imports/aliases
+      - ~/.zshrc-imports/plugins: zshrc-imports/plugins
+      - ~/.p10k.zsh: p10k.zsh

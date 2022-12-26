@@ -83,7 +83,7 @@ plugins=(
   #may no longer be necessary!
   #zsh-completions
 )
-for file in ~/.zshrc-imports/plugins/.*; do
+for file in ~/.zshrc-imports/plugins/*; do
   source "$file"
 done
 plugins+=(history-substring-search)
