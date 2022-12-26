@@ -25,4 +25,4 @@ steps:
         PowerPoint: 462062816
         Word: 462054704
   - exec:
-      - ./defaults/personal.sh
+      - ./defaults/personal-base.sh
